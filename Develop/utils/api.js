@@ -12,5 +12,4 @@ async function getUserResponse() {
     }
   }
 
-
 module.exports = getUserResponse;
