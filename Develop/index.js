@@ -5,8 +5,8 @@ const util = require('util');
 
 
 // Internal modules
-getUserResponse = require('./utils/api.js');
-generateMarkdown = require('./utils/generateMarkdown.js');
+const getUserResponse = require('./utils/api.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // array of questions for user
 const questions = [
