@@ -5,7 +5,7 @@ const util = require('util');
 
 
 // Internal modules
-const getUserResponse = require('./utils/api.js');
+const getUser = require('./utils/getUser.js');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // array of questions for user
@@ -113,11 +113,32 @@ function writeToFile(fileName, data) {
 
 
 
-
 // function to initialize program
-function init() {
+async function init() {
+    try {
+        //prompt inquirer questions
+        const userResponse = await inquirer.prompt(questions);
+        console.log("Your responses: ",userResponses);
+        
+        //fetch and wait for user info from GitHub
+        const userInfo = await getUser(userResponse);
+        console.log("Your GitHub user info: ",userInfo);
+        
+        // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
+        const markDown = generateMarkdown(data);
+        console.log(markDown);
+    
+        // write markdown to file
+        await writeFileAsync("README.md", markDown);
+    
+        console.log("Successfully wrote to README.md");
 
-}
+    } catch(err) {
+        console.log(err);
+    }
+
+};
+
 
 // function call to initialize program
 init();
