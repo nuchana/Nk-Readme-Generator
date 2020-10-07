@@ -99,16 +99,17 @@ const writeFileAsync = util.promisify(writeToFile);
 
 
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, function (err) {
+    fs.writeFile(fileName,data, function(err) {
 
-        if (err) {
-            return console.log(err);
-        }
-
-        console.log("Readme file is created successfully!");
-
-    });
+    if (err) {
+      return console.log(err);
+    }
+  
+    console.log("Readme file is created successfully!");
+  
+  });
 }
+
 
 
 
