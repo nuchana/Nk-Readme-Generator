@@ -6,7 +6,9 @@
   
 Every good project needs a quality README with information about the app - what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project. 
 
-This is a command-line application that runs with Node.js that dynamically generates a README.md file based on input about your project. Check out the [`exampleREADME.md`] (https://github.com/nuchana/Nk-Readme-Generator/blob/main/Develop/exampleREADME.md) in this repo as an example. 
+This is a command-line application that runs with Node.js that dynamically generates a README.md file based on input about your project. Check out the [`exampleREADME.md`](https://github.com/nuchana/Nk-Readme-Generator/blob/main/exampleREADME.md) in this repo as an example. 
+
+
 
 
 ## Table of Contents
@@ -37,7 +39,7 @@ The application then takes your responses and uses `axios` to get your GitHub pr
 
 From there, the application will generate markdown and a table of contents for the README conditionally that will depend on your responses to the Inquirer prompts (so, if it's required questions, the default mode is set up. But if you don't answer the optional questions, such as Installation, an Installation section will not be included in your README). The README will also include badges for your GitHub repo.
 
-Last but not least, `fs.writeFile` is used to generate your project's README.md file. Check out the [`exampleREADME.md`] (https://github.com/nuchana/Nk-Readme-Generator/blob/main/Develop/exampleREADME.md) in this repo as an example. 
+Last but not least, `fs.writeFile` is used to generate your project's README.md file. Check out the [`exampleREADME.md`] (https://github.com/nuchana/Nk-Readme-Generator/blob/main/exampleREADME.md) in this repo as an example. 
 
 
 ## Methodology
