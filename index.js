@@ -127,8 +127,8 @@ async function init() {
         console.log("Your responses: ",userResponse);
         
         //fetch and wait for user info from GitHub
-        // const userInfo = await getUser(userResponse);
-        // console.log("Your GitHub user info: ",userInfo);
+        const userInfo = await getUser(userResponse);
+        console.log("Your GitHub user info: ",userInfo);
         
         // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
         const markDown = generateMarkdown(userResponse)//, //userInfo);
