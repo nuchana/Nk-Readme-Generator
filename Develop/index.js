@@ -89,7 +89,13 @@ const questions = [
         message: "Choose a license for your project.",
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license'
-    }
+    },
+
+    {
+        type: 'input',
+        message: "Please provide your e-mail",
+        name: 'email',
+    },
 
 ];
 
@@ -118,14 +124,14 @@ async function init() {
     try {
         //prompt inquirer questions
         const userResponse = await inquirer.prompt(questions);
-        console.log("Your responses: ",userResponses);
+        console.log("Your responses: ",userResponse);
         
         //fetch and wait for user info from GitHub
-        const userInfo = await getUser(userResponse);
-        console.log("Your GitHub user info: ",userInfo);
+        // const userInfo = await getUser(userResponse);
+        // console.log("Your GitHub user info: ",userInfo);
         
         // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
-        const markDown = generateMarkdown(data);
+        const markDown = generateMarkdown(userResponse)//, //userInfo);
         console.log(markDown);
     
         // write markdown to file

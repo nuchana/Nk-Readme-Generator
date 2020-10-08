@@ -6,7 +6,7 @@ async function getUser(userResponse) {
     let queryUrl = `https://api.github.com/users/${userResponse.username}`;
     let response = await axios.get(queryUrl);
 
-    // console.log(response.data)
+    console.log(response.data)
     return response.data;
   } 
   catch (error) {
